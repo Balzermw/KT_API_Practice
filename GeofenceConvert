@@ -1,0 +1,10 @@
+import pandas as pd
+# Read csv file into f variable
+f=pd.read_csv("addresses-AGSTRUCKING-2.csv")
+# Determine a list of columns to keep by name
+keep_col = ['name','address','latitude','longitude']
+# Create new file from kept columns
+new_f = f[keep_col]
+# Export new file to new CSV
+new_f.to_csv("KT.csv", index=False)
+
